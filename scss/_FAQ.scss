@@ -1,0 +1,95 @@
+.FAQ {
+    background-color: $color-orange;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    border-radius: 6px;
+
+    &__title {
+        @include title;
+        color: $color-white;
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 60px;
+        
+        .question {
+            width: 1000px;
+            height: auto;
+            background-color: $color-white;
+            border-radius: 3px;
+
+            &__item {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 30px 30px 30px 15px;
+
+                label {
+                    width: 900px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    color: $color-purpur;
+                    
+                }
+                label:before {
+                    content: "";
+                    display: block;
+                    background: url("../img/main/checkbox.svg");
+                    width: 34px;
+                    height: 18px;
+                    position: absolute;
+                    left: 900px;
+                    top: 2px;
+                }
+
+                label:hover {
+                    
+                    color: $color-orange;
+                }
+                label:hover::before {
+                    background: url("../img/main/checkboxHover.svg");
+                }
+
+                input {
+                     appearance: none;
+                }
+
+                input:checked ~ .reply  {
+                        display: block;
+                }
+
+                input:checked + label:before {
+                    transform: rotate(180deg);
+                }
+
+                .reply {
+                    width: 100%;
+                    height: auto;
+                    padding-top: 30px;
+
+                    background-color: $color-white;
+                    display: none;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    p {
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+}

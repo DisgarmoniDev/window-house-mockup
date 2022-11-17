@@ -1,0 +1,20 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixin";
+@import "./header";
+@import "./services";
+@import "./about-company";
+@import "./portfolio";
+@import "./FAQ";
+@import "./footer";
+
+
+body {
+    background-color: $color-bgMain;
+    @include font-Text;
+}
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+}

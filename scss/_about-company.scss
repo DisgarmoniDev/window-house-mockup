@@ -1,0 +1,122 @@
+.about-company{
+    min-height: 1100px;
+
+    &__title{
+        @include title;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    &__menubar {
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            color: $color-purpur;
+            border: none;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            padding: 10px 22px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked + label {
+            background: $color-orange;
+            color: $color-white;
+        }
+    }
+
+    &__banner {
+        width: 1200px;
+        display: flex;
+        box-sizing: border-box;
+        margin: 25px auto 0 auto;
+        
+
+        .banner-box {
+            display: flex;
+            background-color: $color-white;
+            padding: 50px;
+
+            &__logo {
+                width: 200px;
+                height: 140px;
+                align-self: flex-start;
+            }
+            &__description {
+                align-self: flex-end;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        &-img {
+            max-width: 600px;
+            max-height: 460px;
+        }
+    }
+
+    &__advantage {
+        box-sizing: border-box;
+        max-width: 1200px;
+        margin: 70px auto;
+        padding: 0 40px;
+        .advantage-cards{
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px 150px;
+            gap: 40px;
+
+            &__item {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                grid-template-rows: 1fr;
+                justify-content: center;
+               
+                
+                &-img {
+                    margin-left: -25px;
+                }
+                &-description {
+
+                    h3{
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: $color-purpur;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        width: 230px;
+                        font-size: 16px;
+                        line-height: 26px;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+
+        .advantage-btn {
+            width: 288px;
+            margin: 0 auto;
+
+            &__item {
+                @include btn;
+                font-size: 16px;
+                padding: 15px 35px;
+            }
+        } 
+    } 
+}
